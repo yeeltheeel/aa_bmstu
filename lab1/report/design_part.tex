@@ -1,0 +1,71 @@
+\chapter{Конструкторская часть}
+%<пишем про алгоритмы, архитектуру ПО и тп>
+
+\section{Описание алгоритмов}
+
+\begin{figure}[!htbp]
+	\centering
+	\includesvg[width=0.2\textwidth]{aa_lab1-std}
+	\caption{Cхема стандартного алгоритма}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htbp]
+	\centering
+	\includesvg[width=0.7\textwidth]{aa_lab1-win}
+	\caption{Cхема алгоритма Винограда}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htbp]
+	\centering
+	\includesvg[width=0.4\textwidth]{aa_lab1-win2}
+	\caption{Cхема алгоритма Винограда}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htbp]
+	\centering
+	\includesvg[width=0.8\textwidth]{aa_lab1-win_opt}
+	\caption{Cхема алгоритма Винограда с оптимизацией}
+\end{figure}
+\FloatBarrier
+
+
+\section{Расчёт трудоёмкости алгоритмов}
+
+Введём модель вычислений для определения теоретической трудоёмкости описанных ранее алгоритмов.\\
+
+\begin{table}[!htbp]
+	\caption{Цены базовых операций.}
+	\centering
+	\begin{tabularx}{\textwidth}{|*{2}{>{\centering\arraybackslash}X|}}
+		\hline
+		\textbf{Операции} & \textbf{Цена} \\\hline
+		{ +, - , =, ++, $--$ , <<, >> } & 1 \\\hline
+		{ *, /, \%, *=, /= } & 2 \\\hline
+		{ ==, >=, <=, !=, >, <, \&\&, || } & 1 \\\hline
+		{ [], \{\} } & 1\\\hline
+	\end{tabularx}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{Трудоёмкость алгоритмов.}
+	\small
+	\begin{tabularx}{\textwidth}{|*{3}{X|}}
+		\hline
+		\textbf{Алгоритм} & \textbf{Трудоёмкость ЛС} & \textbf{Трудоёмкость ХС} \\\hline
+		Стандартный & $2 + 2N + 2NQ + 10MNQ$ & $2 + 2N + 2NQ + 10MNQ$ \\\hline
+		Виноград & $12 - 7N - 9Q + 6NM + 9NQ + 13.5NMQ$ & $14 - 5N - 9Q + 6NM + 18NQ + 13.5NMQ$ \\\hline
+		Виноград с оптимизацией & $10 + Q + 2.25MQ + 2N + 7NQ + 13.5NMQ$ & $13 + Q + 2.25MQ + 4N + 16NQ + 13.5NMQ$ \\\hline
+	\end{tabularx}
+\end{table}
+\FloatBarrier
+
+\section*{Вывод}
+%<что сделали в конструкторке и получили в результате, кратко>
+
+В данном разделе мной были построены схемы алгоритмов и вычислена их трудоёмкость с помощью введённой модели вычислений.
+
+\clearpage

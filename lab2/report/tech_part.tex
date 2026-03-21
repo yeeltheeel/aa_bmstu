@@ -1,0 +1,49 @@
+\chapter{Технологическая часть}
+%<писать все про реализацию: какие языки, какие ide и тд.; коды алгоритмов/программы>
+%<тестовые данные и волшебные слова <<все тесты пройдены успешно>> >
+
+\section{Реализация алгоритмов}
+Для реализации алгоритмов использовался язык программирования C++, так как он поддерживает статическую типизацию и имеет возможность отключения сбощика мусора. Отладка происходила в среде разработки <<Visual Studio 2022>>.\\
+
+% 14911
+
+\lstinputlisting[firstline=10, lastline=17, style=cpp]{../code/recursive.cpp}
+Листинг 1 -- Рекурсивный алгоритм.\\
+{}
+
+\lstinputlisting[firstline=5, lastline=8, style=cpp]{../code/recursive.cpp}
+Листинг 2 -- Нерекурсивный алгоритм.\\
+{}
+
+
+\section{Тестирование}
+
+\begin{table}[!htbp]
+	\caption{Модульные тесты для рекурсивного алгоритма.}
+	\centering
+	\begin{tabularx}{\textwidth}{|*{2}{>{\centering\arraybackslash}X|}}
+		\hline
+		\textbf{Вход} & \textbf{Выход}\\\hline
+		1 & 1 \\\hline
+		10 & 1 2 3 4 5 6 7 8 9 10 \\\hline
+	\end{tabularx}
+\end{table}
+
+\begin{table}[!htbp]
+	\caption{Модульные тесты для нерекурсивного алгоритма.}
+	\centering
+	\begin{tabularx}{\textwidth}{|*{2}{>{\centering\arraybackslash}X|}}
+		\hline
+		\textbf{Вход} & \textbf{Выход}\\\hline
+		1 & 1 \\\hline
+		10 & 1 2 3 4 5 6 7 8 9 10 \\\hline
+	\end{tabularx}
+\end{table}
+
+
+\section*{Вывод}
+%<что делали и получили в результате>
+
+В данном разделе мной были реализованы рекурсивная и нерекурсивная версии алгоритмов по варианту и проведено их успешное тестирование.
+
+\clearpage

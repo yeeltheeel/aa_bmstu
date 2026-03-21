@@ -1,0 +1,14 @@
+\babel@toc {russian}{}\relax 
+\contentsline {chapter}{ВВЕДЕНИЕ}{3}{Doc-Start}%
+\contentsline {chapter}{\numberline {1}Аналитическая часть}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Задание по варианту}{4}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Конструкторская часть}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Описание алгоритмов}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Расчёт трудоёмкости алгоритмов}{6}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Технологическая часть}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Реализация алгоритмов}{7}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Тестирование}{7}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Исследовательская часть}{8}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Замеры процессорного времени}{8}{section.4.1}%
+\contentsline {chapter}{ЗАКЛЮЧЕНИЕ}{9}{figure.caption.8}%
+\contentsline {chapter}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}{10}{figure.caption.8}%

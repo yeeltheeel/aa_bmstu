@@ -1,0 +1,85 @@
+\chapter{Исследовательская часть}
+%<цель исследования, на какой машине делали (указать ЦПУ, ОЗУ, ОС), желательно написать, как исследовали и при каких условиях; что получили в результате (таблицы + графики)>
+
+\section{Замеры процессорного времени}
+
+Замеры проводились на ноутбуке Redmibook Pro 14 2022:
+\begin{itemize}
+	\item процессор Intel i7-12650H (архитектура x86-64, 10 ядер по 2.3 Ггц, 16 логических ядер);
+	\item оперативная память 16 Гб (DDR4, 5200 МГц);
+	\item операционная система Windows 11 Home 25H2.
+\end{itemize}
+Для замеров использовалась функция clock() из библиотеки ctime \cite[с.~288]{lit1}. 
+
+%\begin{table}[!htbp]
+%	\caption{Некоторые замеры процессорного времени при k=1.}
+%	\centering
+%	\begin{tabularx}{\textwidth}{|p{2cm}|X|X|}
+%		\hline
+%		\textbf{Размер} & \textbf{Последовательный} & \textbf{Параллельный} \\\hline
+%		&&\\\hline
+%	\end{tabularx}
+%\end{table}
+%\FloatBarrier
+
+% Выполнить сравнительный анализ зависимостей времени решения задач от размерности входа для реализации последовательного алгоритма и для реализации модифицированного алгоритма, запущенной с единственным вспомогательным (рабочим) потоком.
+
+\begin{figure}[!htbp]
+	\centering
+	\begin{tikzpicture}
+		\selectcolormodel{gray}
+		\begin{axis}[
+			axis lines = left, 
+			xlabel = Размер, 
+			ylabel = Время, 
+			grid=both,
+			minor grid style={gray!25}, 
+			major grid style={gray!50},
+			legend style={font=\scriptsize, legend pos=north west}
+		]
+			\addplot+[smooth, mark=none] table [x index=0, y index=1] {../code/single.txt};
+			\addlegendentry{Последовательный}
+			\addplot+[smooth, mark=none, dashed] table [x index=0, y index=2] {../code/single.txt};
+			\addlegendentry{Параллельный}
+		\end{axis}
+	\end{tikzpicture}
+	\caption{График зависимости процессорного времени от размерности входа при k=1.}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[!htbp]
+	\centering
+	\begin{tikzpicture}
+		\selectcolormodel{gray}
+		\begin{axis}[
+			axis lines = left, 
+			xlabel = Размер, 
+			ylabel = Время, 
+			grid=both,
+			minor grid style={gray!25}, 
+			major grid style={gray!50},
+			legend style={font=\scriptsize, legend pos=north west}
+		]
+			\addplot+[smooth, mark=none, loosely dashdotted] table [x index=0, y index=1] {../code/timeres.txt};
+			\addlegendentry{k=1}
+			\addplot+[smooth, mark=none, dashed] table [x index=0, y index=2] {../code/timeres.txt};
+			\addlegendentry{k=2}
+			\addplot+[smooth, mark=none, loosely dotted] table [x index=0, y index=3] {../code/timeres.txt};
+			\addlegendentry{k=4}
+			\addplot+[smooth, mark=none, dotted] table [x index=0, y index=4] {../code/timeres.txt};
+			\addlegendentry{k=8}
+			\addplot+[smooth, mark=none, solid] table [x index=0, y index=5] {../code/timeres.txt};
+			\addlegendentry{k=16}
+			\addplot+[smooth, mark=none, dashdotted] table [x index=0, y index=6] {../code/timeres.txt};
+			\addlegendentry{k=32}
+		\end{axis}
+	\end{tikzpicture}
+	\caption{График зависимости процессорного времени от размерности входа при различных k = \{1, 2, ... , 32\}.}
+\end{figure}
+\FloatBarrier
+
+\section*{Вывод}
+
+В данном разделе были проведены замеры реального времени при одном рабочем потоке для каждой реализации из предыдущего раздела. Также мной было проведен сравнительный анализ зависимости времени выполнения параллельной реализации при разном количестве потоков. Самое оптимальное количество потоков -- 16.
+
+\clearpage

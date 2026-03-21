@@ -1,0 +1,64 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.2.9">
+  <diagram name="Page-1" id="kgSe1f5MDIHk7GLW5hOG">
+    <mxGraphModel dx="1572" dy="926" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="uF5j2_OhjXwHK2Nnr2-a-13" edge="1" parent="1" source="uF5j2_OhjXwHK2Nnr2-a-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=20;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="uF5j2_OhjXwHK2Nnr2-a-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uF5j2_OhjXwHK2Nnr2-a-1" parent="1" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.start" value="Начало" vertex="1">
+          <mxGeometry height="40" width="150" x="338.5" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uF5j2_OhjXwHK2Nnr2-a-14" edge="1" parent="1" source="uF5j2_OhjXwHK2Nnr2-a-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="uF5j2_OhjXwHK2Nnr2-a-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uF5j2_OhjXwHK2Nnr2-a-2" parent="1" style="html=1;dashed=0;whiteSpace=wrap;" value="Инициализация генератора,&amp;nbsp;&lt;div&gt;3х обработчиков и 3х очередей&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="185" x="321" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="uF5j2_OhjXwHK2Nnr2-a-16" edge="1" parent="1" source="uF5j2_OhjXwHK2Nnr2-a-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="uF5j2_OhjXwHK2Nnr2-a-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uF5j2_OhjXwHK2Nnr2-a-4" parent="1" style="shape=loopLimit;whiteSpace=wrap;html=1;" value="Цикл конвейера" vertex="1">
+          <mxGeometry height="70" width="150" x="338.5" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="uF5j2_OhjXwHK2Nnr2-a-5" parent="1" style="shape=loopLimit;whiteSpace=wrap;html=1;rotation=-180;" value="" vertex="1">
+          <mxGeometry height="70" width="150" x="338.5" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="uF5j2_OhjXwHK2Nnr2-a-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Цикл конвейера" vertex="1">
+          <mxGeometry height="30" width="120" x="353.5" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="uF5j2_OhjXwHK2Nnr2-a-17" edge="1" parent="1" source="uF5j2_OhjXwHK2Nnr2-a-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="uF5j2_OhjXwHK2Nnr2-a-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uF5j2_OhjXwHK2Nnr2-a-7" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Cчитывание графов, помещение результатов в очередь 2" vertex="1">
+          <mxGeometry height="60" width="175" x="326" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="uF5j2_OhjXwHK2Nnr2-a-18" edge="1" parent="1" source="uF5j2_OhjXwHK2Nnr2-a-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="uF5j2_OhjXwHK2Nnr2-a-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uF5j2_OhjXwHK2Nnr2-a-8" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Обработка графа, помещение результатов в очередь 3" vertex="1">
+          <mxGeometry height="60" width="175" x="326" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="uF5j2_OhjXwHK2Nnr2-a-20" edge="1" parent="1" source="uF5j2_OhjXwHK2Nnr2-a-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="uF5j2_OhjXwHK2Nnr2-a-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uF5j2_OhjXwHK2Nnr2-a-9" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Вывод результатов из очереди 3 в файл" vertex="1">
+          <mxGeometry height="60" width="175" x="326" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="uF5j2_OhjXwHK2Nnr2-a-15" edge="1" parent="1" source="uF5j2_OhjXwHK2Nnr2-a-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="uF5j2_OhjXwHK2Nnr2-a-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uF5j2_OhjXwHK2Nnr2-a-10" parent="1" style="html=1;dashed=0;whiteSpace=wrap;" value="Заполнение очереди 1&amp;nbsp;&lt;div&gt;заявками&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="185" x="321" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="uF5j2_OhjXwHK2Nnr2-a-11" parent="1" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.start" value="Конец" vertex="1">
+          <mxGeometry height="40" width="150" x="338.5" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="uF5j2_OhjXwHK2Nnr2-a-21" edge="1" parent="1" source="uF5j2_OhjXwHK2Nnr2-a-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=-20;entryPerimeter=0;" target="uF5j2_OhjXwHK2Nnr2-a-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

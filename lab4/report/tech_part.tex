@@ -1,0 +1,42 @@
+\chapter{Технологическая часть}
+
+%17455
+
+\section{Реализация алгоритмов}
+Для реализации алгоритмов использовался язык программирования C++, так как он поддерживает статическую типизацию, имеет возможность отключения сборщика мусора и поддерживаеь нативную многопоточность (библиотека threads~\cite[с.~1217]{lit1}). Отладка происходила в среде разработки <<Visual Studio 2022>>.
+
+\lstinputlisting[firstline=172, lastline=187, style=cpp]{../code/graph.cpp}
+Листинг 1 -- Последовательный алгоритм.
+
+\lstinputlisting[firstline=189, lastline=243, style=cpp]{../code/graph.cpp}
+Листинг 2 -- Параллельный алгоритм.
+
+\section{Тестирование}
+
+\begin{table}[!htbp]
+	\caption{Модульные тесты для алгоритмов.}
+	\centering
+	
+	\begin{tabularx}{\textwidth}{|*{3}{>{\centering\arraybackslash}X|}}
+		\hline
+		\textbf{Алгоритм} &  \textbf{Вход} & \textbf{Выход}\\\hline
+		Последовательный & testgraph.gv & 
+		\begin{minipage}{5cm}\scriptsize
+			\{ n26 n43 n0 n39 n44 n18 n32 n35 n31 n38 n36 n40 n33 n48 n27 n19 n37 n2 n46 n12 n14 n16 \}, 
+			\{ n5 n17 n45 n30 n20 \}, \{ n21 n1 n25 \}, \{ n34 n24 n7 \}, \{ n9 n6 \}, \{ n4 n29 \}, \{ n15 n49 \}
+		\end{minipage}
+		 \\\hline
+		Параллельный & testgraph.gv & 
+		\begin{minipage}{5cm}\scriptsize
+			\{ n26 n43 n0 n39 n44 n18 n32 n35 n31 n38 n36 n40 n33 n48 n27 n19 n37 n2 n46 n12 n14 n16 \}, 
+			\{ n5 n17 n45 n30 n20 \}, \{ n25 n1 n21 \}, \{ n34 n24 n7 \}, \{ n4 n29 \}, \{ n9 n6 \}, \{ n15 n49 \} 
+		\end{minipage}
+		\\\hline
+	\end{tabularx}
+\end{table}
+
+\section*{Вывод}
+
+В данном разделе мной были реализованы последовательный и параллельный алгоритмы и проведено их успешное тестирование.
+
+\clearpage

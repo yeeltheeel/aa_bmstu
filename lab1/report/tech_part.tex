@@ -1,0 +1,109 @@
+\chapter{Технологическая часть}
+%<писать все про реализацию: какие языки, какие ide и тд.; коды алгоритмов/программы>
+%<тестовые данные и волшебные слова <<все тесты пройдены успешно>> >
+
+\section{Реализация алгоритмов}
+Для реализации алгоритмов использовался язык программирования C++, так как он поддерживает статическую типизацию и имеет возможность отключения сборщика мусора. Отладка происходила в среде разработки <<Visual Studio 2022>>.\\
+
+\lstinputlisting[firstline=4, lastline=17, style=cpp]{../code/matr.cpp}
+Листинг 1 -- Стандартный алгоритм умножения матриц\\
+{}
+
+\lstinputlisting[firstline=19, lastline=57, style=cpp]{../code/matr.cpp}
+Листинг 2 -- Алгоритм Винограда умножения матриц\\
+{}
+
+\lstinputlisting[firstline=59, lastline=91, style=cpp]{../code/matr.cpp}
+Листинг 3 -- Алгоритм Винограда умножения матриц с оптимизацией\\
+{}
+
+\section{Тестирование}
+
+\begin{table}[!htbp]
+	\caption{Модульные тесты для стандартного алгоритма.}
+	\centering
+	\begin{tabularx}{\textwidth}{|*{2}{>{\centering\arraybackslash}X|}}
+		\hline
+		\textbf{Вход} & \textbf{Выход}\\\hline
+		4 2 2 4 & \text{} \\
+		$\begin{pmatrix}
+			2&3\\4&5\\3&4\\5&6 
+		\end{pmatrix}$
+		$\begin{pmatrix}
+			3&4&2&5\\6&4&3&2
+		\end{pmatrix}$ &
+		$\begin{pmatrix}
+			24&20&13&16\\42&36&23&30\\33&28&18&23\\51&44&28&37
+		\end{pmatrix}$
+		\\\hline
+	\end{tabularx}
+\end{table}
+
+\begin{table}[!htbp]
+	\caption{Модульные тесты для алгоритма Винограда.}
+	\centering
+	\begin{tabularx}{\textwidth}{|*{2}{>{\centering\arraybackslash}X|}}
+		\hline
+		\textbf{Вход} & \textbf{Выход}\\\hline
+		4 2 2 4 & \text{} \\
+		$\begin{pmatrix}
+			2&3\\4&5\\3&4\\5&6 
+		\end{pmatrix}$
+		$\begin{pmatrix}
+			3&4&2&5\\6&4&3&2
+		\end{pmatrix}$ &
+		$\begin{pmatrix}
+			24&20&13&16\\42&36&23&30\\33&28&18&23\\51&44&28&37
+		\end{pmatrix}$ \\\hline
+		4 3 3 4 & \text{} \\
+		$\begin{pmatrix}
+			2&3&3\\4&5&5\\3&4&4\\5&6&6 
+		\end{pmatrix}$
+		$\begin{pmatrix}
+			3&4&2&5\\6&4&3&2\\7&3&2&1
+		\end{pmatrix}$ &
+		$\begin{pmatrix}
+			45&29&19&19\\77&51&33&35\\61&40&26&27\\93&62&40&43
+		\end{pmatrix}$
+		\\\hline
+	\end{tabularx}
+\end{table}
+
+\begin{table}[!htbp]
+	\caption{Модульные тесты для алгоритма Винограда с оптимизацией.}
+	\centering
+	\begin{tabularx}{\textwidth}{|*{2}{>{\centering\arraybackslash}X|}}
+		\hline
+		\textbf{Вход} & \textbf{Выход}\\\hline
+		4 2 2 4 & \text{} \\
+		$\begin{pmatrix}
+			2&3\\4&5\\3&4\\5&6 
+		\end{pmatrix}$
+		$\begin{pmatrix}
+		 	3&4&2&5\\6&4&3&2
+		\end{pmatrix}$ &
+		$\begin{pmatrix}
+			24&20&13&16\\42&36&23&30\\33&28&18&23\\51&44&28&37
+		\end{pmatrix}$ \\\hline
+		4 3 3 4 & \text{} \\
+		$\begin{pmatrix}
+			2&3&3\\4&5&5\\3&4&4\\5&6&6 
+		\end{pmatrix}$
+		$\begin{pmatrix}
+			3&4&2&5\\6&4&3&2\\7&3&2&1
+		\end{pmatrix}$ &
+		$\begin{pmatrix}
+			45&29&19&19\\77&51&33&35\\61&40&26&27\\93&62&40&43
+		\end{pmatrix}$
+		\\\hline
+	\end{tabularx}
+\end{table}
+
+% чет нечет
+
+\section*{Вывод}
+%<что делали и получили в результате>
+
+В данном разделе мной были реализованы алгоритмы умножения матриц и проведено их успешное тестирование.
+
+\clearpage

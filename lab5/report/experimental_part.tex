@@ -1,0 +1,39 @@
+\chapter{Исследовательская часть}
+
+\section{Замеры реального времени}
+
+% Сравнить реальное время, затрачиваемое на обработку N \in {25, 50, 75, 100, 125} заявок последовательно и конвейером, основанным на k нативных потоках, не считая диспетчера.
+
+Замеры проводились на ноутбуке Redmibook Pro 14 2022:
+\begin{itemize}
+	\item процессор Intel i7-12650H (архитектура x86-64, 10 ядер по 2.3 Ггц);
+	\item оперативная память 16 Гб (DDR4, 5200 МГц);
+	\item операционная система Windows 11 Home 25H2.
+\end{itemize}
+Для замеров использовалась функция now() из библиотеки chrono~\cite[с.~705]{lit1}.
+
+Значение k=16 (получено в лабораторной работе №4). 
+
+\begin{figure}[!htbp]
+	\centering
+	\begin{tikzpicture}
+		\selectcolormodel{gray}
+		\begin{axis}[
+				axis lines=left, grid=both, minor grid style={gray!25}, major grid style={gray!50},
+				legend style={font=\scriptsize, legend pos=north west}, ymin=0.002,
+				xlabel=N, ylabel={Время, с},
+			]
+			\addplot+[smooth, mark=none] table [x index=0, y index=1] {../code/restm.txt};
+			\addlegendentry{при k потоках}
+			\addplot+[smooth, mark=none, dashed] table [x index=0, y index=2] {../code/restm.txt};
+			\addlegendentry{ при 1 потоке}
+		\end{axis}
+	\end{tikzpicture}
+	\caption{График зависимости времени от N заявок.}
+\end{figure}
+
+\section*{Вывод}
+
+В данном разделе мной был проведен сравнительный анализ времени выполенения при различном количестве нативных потоков. 
+
+\clearpage

@@ -1,0 +1,61 @@
+\chapter{Конструкторская часть}
+
+\section{Описание алгоритмов}
+
+Схемы рассматриваемых алгоритмов представлены на рисунках 2.1 и 2.2.
+
+\begin{figure}[!htbp]
+	\centering
+	\includesvg[width=0.4\textwidth]{lab6_bf}
+	\caption{Cхема алгоритма полного перебора.}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[!htbp]
+	\centering
+	\includesvg[width=0.4\textwidth]{lab6_aa}
+	\caption{Cхема муравьиного алгоритма.}
+\end{figure}
+\FloatBarrier
+
+\section{Расчёт трудоёмкости алгоритмов}
+
+С помощью введённой модели вычислений (табл.~\ref{t1}) была определена теоретическая трудоёмкость описанных ранее алгоритмов, результаты представлены в табл.~\ref{t2}.
+
+\begin{table}[!htbp]
+	\caption{Цены базовых операций.}
+	\label{t1}
+	\centering
+	\begin{tabularx}{\textwidth}{|*{2}{>{\centering\arraybackslash}X|}}
+		\hline
+		\textbf{Операции} & \textbf{Цена} \\\hline
+		{ +, - , =, ++, $--$ , <<, >> } & 1 \\\hline
+		{ *, /, \%, *=, /= } & 2 \\\hline
+		{ ==, >=, <=, !=, >, <, \&\&, || } & 1 \\\hline
+		{ [], \{\} } & 1\\\hline
+	\end{tabularx}
+\end{table}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{Трудоёмкость алгоритмов.}
+	\label{t2}
+	\small
+	\begin{tabularx}{\textwidth}{|p{3cm}|*{2}{X|}}
+		\hline
+		\textbf{Алгоритм} & \textbf{Трудоёмкость ЛС} & \textbf{Трудоёмкость ХС} \\\hline
+		Полный перебор & 
+		$ (n - 1)!(2n + 1) + n + 4 $ & 
+		$ (n - 1)!(2n + 3) + 2n + 2 $ \\\hline
+		Муравьиный & 
+		$ (T_{max} - 1)n^{3} + 3T_{max}n + 3T_{max} + 2 $ & 
+		$ T_{max}n^{3} + (2T_{max} + 2)n + 2T_{max} + 5 $ \\\hline
+	\end{tabularx}
+\end{table}
+\FloatBarrier
+
+\section*{Вывод}
+
+В данном разделе мной были построены схемы алгоритмов и вычислена их трудоёмкость с помощью введённой модели вычислений.
+
+\clearpage

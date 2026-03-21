@@ -1,0 +1,73 @@
+\chapter{Конструкторская часть}
+%<пишем про алгоритмы, архитектуру ПО и тп>
+
+\section{Описание алгоритмов}
+
+\begin{figure}[!htbp]
+	\centering
+	\includesvg[width=0.7\textwidth]{aa2-rec}
+	\caption{Схема рекурсивного алгоритма.}
+\end{figure}
+
+\begin{figure}[!htbp]
+	\centering
+	\includesvg[width=0.2\textwidth]{aa2-nonrec}
+	\caption{Схема нерекурсивного алгоритма.}
+\end{figure}
+\clearpage
+
+\FloatBarrier
+
+
+\section{Расчёт трудоёмкости алгоритмов}
+
+Введём модель вычислений для определения теоретической трудоёмкости описанных ранее алгоритмов.\\
+
+\begin{table}[!htbp]
+	\caption{Цены базовых операций.}
+	\centering
+	\begin{tabularx}{\textwidth}{|*{2}{>{\centering\arraybackslash}X|}}
+		\hline
+		\textbf{Операции} & \textbf{Цена} \\\hline
+		{ +, - , =, ++, $--$ , <<, >> } & 1 \\\hline
+		{ *, /, \%, *=, /= } & 2 \\\hline
+		{ ==, >=, <=, !=, >, <, \&\&, || } & 1 \\\hline
+		{ [], \{\} } & 1 \\\hline
+		{ call/return } & 34 \\\hline
+	\end{tabularx}
+\end{table}
+
+Цена вызова-возврата рассчитывалась по формуле \ref{cr}:
+\begin{align}
+	\label{cr}
+	CR = 2 \cdot (p + k + r + l + f), % cr/2 = 1 + 16 + 0 + 0 + 0 = 17
+\end{align}
+где
+\begin{itemize}[label={}]
+\item $p$ - количество передаваемых параметров,
+\item $k$ - количество сохранямых в стеке регистров,
+\item $r$ - количество возвращаемых по адресной ссылке значений,
+\item $l$ - количество локальных ячеек для обеспечения реентерабельности (повторного вызова до завершения предыдущего),
+\item $f$ - количество ячеек для возвращаемого значения.
+\end{itemize}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{Трудоёмкость алгоритмов.}
+	\small
+	\begin{tabularx}{\textwidth}{|*{3}{X|}}
+		\hline
+		\textbf{Алгоритм} & \textbf{Трудоёмкость ХС} \\\hline
+		Рекурсивный & $(2N - 1)\mathrel{CR} + 3N$ \\\hline
+		Нерекурсивный & $\mathrel{CR} + 2 + 3N$ \\\hline 
+	\end{tabularx}
+\end{table}
+
+\FloatBarrier
+
+\section*{Вывод}
+%<что сделали в конструкторке и получили в результате, кратко>
+
+В данном разделе мной были построены схемы алгоритмов и вычислена их трудоёмкость с помощью введённой модели вычислений.
+
+\clearpage
