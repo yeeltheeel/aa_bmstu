@@ -1,0 +1,8 @@
+*.aux 
+*.out 
+*.synctex.gz 
+*.toc
+*.log
+*.blg 
+*.pdf_tex
+*.exe
